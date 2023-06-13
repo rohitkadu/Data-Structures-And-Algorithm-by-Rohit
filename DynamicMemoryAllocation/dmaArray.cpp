@@ -12,7 +12,7 @@ int main()
     if(!arr) {
         cout<<"\t!!!Memory Allocation Failed" ;
     } else {
-        cout<<"\n*Memory Allocated Successfully .";
+        cout<<"\n*Memory Allocated Successfully. ";
         printf("Memory Block of \'%d\' created .\n\n",n*sizeof(int));
     }
 
