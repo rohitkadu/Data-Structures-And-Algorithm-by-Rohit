@@ -13,9 +13,22 @@ Priority Queue:
 using namespace std;
 
 
-void printPQ( const priority_queue<int> &pq)
+void printPQ( const priority_queue<int> &meanHeap)
 {
-    priority_queue<int> temp = pq ;
+    priority_queue<int> temp = meanHeap ;
+
+    while (!temp.empty())
+    {
+        cout<<temp.top()<<" ";
+        temp.pop();
+    }
+    
+}
+
+
+void printPQ( const priority_queue<int, vector<int>, greater<int>> &maxHeap)
+{
+    priority_queue<int, vector<int>, greater<int>> temp = maxHeap ;
 
     while (!temp.empty())
     {
@@ -28,15 +41,28 @@ void printPQ( const priority_queue<int> &pq)
 
 void explainPQ() {
 
-    priority_queue<int> pq;
+    priority_queue<int> meanHeap;
 
     for( int i=1 ; i<=10 ; i++ )
     {
-        pq.push(rand() % 101);
+        meanHeap.push(rand() % 101);
     }
 
-    cout<<"priority_queue<int> pq = ";
-    printPQ(pq);
+    cout<<"\n\tpriority_queue<int> meanHeap = ";
+    printPQ(meanHeap);
+
+
+    priority_queue<int, vector<int>, greater<int>> maxHeap;
+
+        for( int i=1 ; i<=10 ; i++ )
+    {
+        maxHeap.push(rand() % 101);
+    }
+
+    cout<<"\n\tpriority_queue<int> maxHeap = ";
+    printPQ(maxHeap);
+
+
     
 
 }
