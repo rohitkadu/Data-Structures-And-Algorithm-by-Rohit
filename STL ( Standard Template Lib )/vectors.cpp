@@ -77,6 +77,17 @@ void explainVector() {
     
     cout<<"\n\tSize of v5 = "<<v5.size();
 
+    v3.clear();
+    if( v3.empty() )
+        cout<<"\nvector<int> v3 is empty";
+    else{
+            cout<<"\nvector<int> v3 = ";
+    for( auto itv3 : v3 )
+    {
+        cout<<itv3<<", ";
+    }
+    }
+
 }
 
 int main()
