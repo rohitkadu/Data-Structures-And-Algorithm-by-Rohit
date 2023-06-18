@@ -63,7 +63,13 @@ void explainSortExtra() {
     sort(a, a+n, comp);
     cout<<"\n\tSorted Customized Pair<int, int> a[] = ";
     for ( auto ita : a)
-        printf("{%d, %d}",ita.first, ita.second);     
+        printf("{%d, %d}",ita.first, ita.second);  
+
+
+    int maxarr = *max_element(arr, arr+i);  
+    int maxv = *max_element(v.begin(), v.end());
+        cout<<"\n\nMax in arr[20] = "<<maxarr; 
+        cout<<"\nMax in v = "<<maxv; 
 
 }
 
