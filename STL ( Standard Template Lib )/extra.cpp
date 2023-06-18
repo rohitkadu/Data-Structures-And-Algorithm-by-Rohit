@@ -20,6 +20,9 @@ int main()
     getline(cin, str);
 
     cout<<"\n\tAll permutations of "<<str<<" = ";
+
+    //note : this only works fine with sorted string so make sure to sort them
+    sort(str.begin() , str.end());
     do{
         cout<<str<<", ";
     }while( next_permutation(str.begin(), str.end()));
